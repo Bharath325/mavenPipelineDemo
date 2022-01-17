@@ -34,7 +34,6 @@ public class FizzBuzzTest {
 
 	@Test
 	public void testZero() {
-
 		Assert.assertThrows(IllegalArgumentException.class, () -> fB.play(0));
 	}
 
