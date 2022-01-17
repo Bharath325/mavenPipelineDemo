@@ -6,29 +6,21 @@
     stages {
         stage ('Compile Stage') {
 
-            steps {
-                withMaven(maven : 'MAVEN 3.8.4') {
-                	
-                    sh 'mvn clean compile'
-                }
+            steps {           
+                    sh 'mvn clean compile'                
             }
         }
 
         stage ('Testing Stage') {
 
-            steps {
-                withMaven(maven : 'MAVEN 3.8.4') {
-                    sh 'mvn test'
-                }
+            steps {               
+                    sh 'mvn test'                
             }
         }
 
-
         stage ('Deployment Stage') {
-            steps {
-                withMaven(maven : 'MAVEN 3.8.4') {
-                    sh 'mvn deploy'
-                }
+            steps {               
+                    sh 'mvn deploy'               
             }
         }
     }
