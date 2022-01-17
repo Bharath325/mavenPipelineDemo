@@ -32,9 +32,13 @@ public class FizzBuzzTest {
 		Assert.assertEquals(fizzBuzz, "Buzz");
 	}
 
-	@Test
+	@Test(expectedExceptions = IllegalArgumentException.class)
 	public void testZero() {
-		Assert.assertThrows(IllegalArgumentException.class, () -> fB.play(0));
+		try {
+			fB.play(0);
+		} catch (IllegalArgumentException e) {
+			System.out.println(e);
+		}
 	}
 
 	@AfterMethod
