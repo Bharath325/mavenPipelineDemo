@@ -6,6 +6,7 @@
 
             steps {
                 withMaven(maven : 'MAVEN 3.8.4') {
+                	sh 'mvn -f mvnPipelineDemo/pom.xml clean install' 
                     sh 'mvn clean compile'
                 }
             }
