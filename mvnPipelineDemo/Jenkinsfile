@@ -7,7 +7,7 @@
         stage ('Compile Stage') {
 
             steps {           
-                    bat 'mvn -f /mavenPipelineDemo/pom.xml clean compile'                
+                    bat 'mvn -f mavenPipelineDemo/mavenPipelineDemo/pom.xml clean compile'                
             }
         }
 
