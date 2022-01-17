@@ -17,11 +17,5 @@
                     bat 'mvn -f mvnPipelineDemo test'                
             }
         }
-
-        stage ('Deployment Stage') {
-            steps {               
-                    bat 'mvn -f mvnPipelineDemo deploy'               
-            }
-        }
     }
 }
